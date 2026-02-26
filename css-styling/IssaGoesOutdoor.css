@@ -1,0 +1,118 @@
+:root {
+    /*colors*/
+    --primaryColor: rgb(64, 29, 25);
+    --backgroundColor: rgb(245, 240, 240);
+    --colorWhenClicked: rgb(232, 153, 153);
+
+    /*issa goes outdoor variables*/
+    --colorIssaGoesOutdoor: rgb(214, 227, 204);
+    --issaGoesOutdoorColorWhenClicked: rgb(67, 107, 68);
+
+    /*fonts*/
+    --mainFont: "Autour One", system-ui;
+    --main_textFontWeight: 400;
+    --main_textFontStyle: normal;
+
+    --textFont: "Aubrey", system-ui;
+}
+
+body {
+    margin: 30px;
+
+    background-color: var(--colorIssaGoesOutdoor);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+
+}
+
+a:hover {
+    color: var(--colorWhenClicked);
+}
+
+/* header */
+
+#issa-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 7rem;
+
+    font-family: "Aubrey", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    .logo-container {
+        display: flex;
+
+        color: var(--primaryColor);
+        gap: 15px;
+    }
+
+    .option-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;       
+
+        padding: 5px;
+
+        height: 65px;
+        width: 550px;
+
+        background-color: var(--primaryColor);
+        border: none;
+        border-radius: 20px;
+
+        li {
+            flex: 1;
+            color: var(--backgroundColor);
+            text-align: center;
+
+            font-size: 0.9rem;
+        } 
+        
+        .issa-archives {
+            display: flex;
+            flex: 1.5;
+            justify-content: end;
+
+            margin-right: 10px;
+        }
+    }
+}
+
+/*issaGoesOutdoor-content-container*/
+#issaGoesOutdoor-content-container {
+    display: flex;  
+
+    align-items: center;
+
+    height: 50vh;
+
+    .issaGoesOutdoor-content-option {
+        display: flex;
+        gap: 15px;
+
+        font-family: var(--mainFont);
+        font-weight: var(--main_textFontWeight);
+        font-style: var(--main_textFontStyle);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            gap: 15px;
+
+            list-style: none;
+
+            a:hover {
+                color: var(--issaGoesOutdoorColorWhenClicked);
+            }
+        }
+    }
+}
